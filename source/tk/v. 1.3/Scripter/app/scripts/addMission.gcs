@@ -1,0 +1,4 @@
+#addPerso.gcs
+SetVar *actual Missions
+CreateText 9 Missions
+end

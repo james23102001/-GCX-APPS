@@ -1,0 +1,4 @@
+#addPerso.gcs
+SetVar *actual Transformation
+CreateText 9 Transformation
+end

@@ -1,0 +1,3 @@
+evaluate self.geometry('+0+0')
+LoadPic app/res/login.png at 200-100
+end

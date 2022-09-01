@@ -1,0 +1,21 @@
+#GetColumn.gcs
+#evaluate [(1,1,2), (5,5,2), (8,5,4)]
+#SetVar *list LASTRESULT
+#SetVar *col 0
+print val ******GETCOLUMN******
+count *list
+substract LASTRESULT 1
+SetVar *len LASTRESULT
+SetVar *i 0
+evaluate []
+SetVar *res LASTRESULT
+repeat *len times
+GetTableElement *i of *list
+SetVar *temp LASTRESULT
+evaluate {*res}.append({*temp} [int({*col})])
+add *i 1
+SetVar *i LASTRESULT
+turn *i into int
+stop repeat
+SetVar LASTRESULT *res
+end

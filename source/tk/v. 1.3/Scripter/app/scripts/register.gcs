@@ -1,0 +1,16 @@
+#register.gcs
+#role : Insérer un utilisateur dans la base de données
+connect database data.db
+GetInput 0
+SetVar *login LASTRESULT
+GetInput 1
+SetVar *password LASTRESULT
+execute query insert
+commit
+MessageBox Congrats Utilisateur cree!
+create window app/screens/connect.ch destroy current
+end
+
+[insert]
+insert into Auteur(nom , pass) values ( *login, *password );
+[/insert]

@@ -1,0 +1,24 @@
+#data.gcs
+connect database data.db
+query select_all with query
+try @check else @error
+close database
+end
+
+[@check]
+print var LASTLIST
+SetVar *list LASTLIST
+SetVar *col 1
+execute app/scripts/getColumn.gcs 1
+print var LASTFILE
+create ListBox with LASTRESULT
+end
+[/@check]
+
+[@error]
+LoadPic app/res/nothing.png
+[/@error]
+
+[query]
+select * from *actual ;
+[/query]

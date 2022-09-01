@@ -1,0 +1,47 @@
+#openData.gcs
+SetVar *fo SELECTED
+SetVar *saved 1
+count *fo
+define $EQUAL 0
+compare LASTRESULT 0
+if $EQUAL then
+	MessageBox Erreur Aucun fichier selectionne!
+	end
+SetVar *fn SELECTED
+connect database data.db
+compare *actual Personages
+if $EQUAL then
+	query select_all with query2
+	function next continue
+	close database
+	end
+compare *actual Objets
+if $EQUAL then
+	query select_all with query2
+	function next continue
+	close database
+	end
+query select_all with query
+function next continue
+close database
+exit
+
+[@next]
+GetTableElement 0 of LASTLIST
+SetVar *tpl LASTRESULT
+GetTableElement 1 of *tpl
+SetVar *textToLoad LASTRESULT
+GetTableElement 0 of *tpl
+SetVar *id LASTRESULT
+print val ID:
+print var *id
+end
+[@next]
+
+[query]
+select id,description from *actual where libelle like *fo ;
+[/query]
+
+[query2]
+select id,description from *actual where nom like *fo ;
+[/query2]

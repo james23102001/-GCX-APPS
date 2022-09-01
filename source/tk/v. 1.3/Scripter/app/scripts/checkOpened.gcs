@@ -1,0 +1,9 @@
+#checkOpened.gcs
+evaluate self.geometry( '+0+0' )
+count *fn
+define $EQUAL 0
+compare LASTRESULT 0
+if $EQUAL then
+	MessageBox Erreur Aucun fichier ouvert!
+	exit
+end

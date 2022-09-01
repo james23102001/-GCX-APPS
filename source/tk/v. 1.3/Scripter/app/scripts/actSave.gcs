@@ -1,0 +1,64 @@
+#actSave.gcs
+GetEditText
+evaluate {LASTRESULT}.replace( '\n' , '%NEWLINE%' )
+SetVar *content LASTRESULT
+print var *content
+define $EQUAL 0
+connect database data.db
+random 0 1000
+add *actual LASTRESULT
+SetVar *fn LASTRESULT
+CreateText 9 *fn
+SetVar *saved 1
+compare *actual Idee
+if $EQUAL then
+	execute query insert1
+	commit
+	MessageBox Enregistre! Enregistrement reussi!
+	end
+compare *actual Lieux
+if $EQUAL then
+	execute query insert1
+	commit
+	MessageBox Enregistre! Enregistrement reussi!
+	end
+compare *actual Missions
+if $EQUAL then
+	execute query insert1
+	MessageBox Enregistre! Enregistrement reussi!
+	commit
+	end
+compare *actual Transformation
+if $EQUAL then
+	execute query insert1
+	commit
+	MessageBox Enregistre! Enregistrement reussi!
+	end
+compare *actual Personages
+if $EQUAL then
+	execute query insert2
+	commit
+	MessageBox Enregistre! Enregistrement reussi!
+	end
+compare *actual Objets
+if $EQUAL then
+	execute query insert2
+	commit
+	MessageBox Enregistre! Enregistrement reussi!
+	end
+compare *actual Script
+if $EQUAL then
+	execute query insert1
+	commit
+	MessageBox Enregistre! Enregistrement reussi!
+	end
+close database
+end
+
+[insert1]
+insert into *actual (libelle, description, idManga ) values ( *fn , *content , *mangaId );
+[/insert1]
+
+[insert2]
+insert into *actual (nom, description, idManga ) values ( *fn , *content , *mangaId );
+[/insert2]

@@ -1,0 +1,35 @@
+#del.gcs
+define $EQUAL 0
+compare *saved 0
+if $EQUAL then
+	MessageBox error No file opened!
+	end
+connect database data.db
+compare *actual Personages
+if $EQUAL then
+	execute query del2
+	commit
+	MessageBox Supprime! Suppression réussie!
+	end
+compare *actual Objets
+if $EQUAL then
+	execute query del2
+	commit
+	MessageBox Supprime! Suppression réussie!
+	end
+execute query del1
+commit
+MessageBox Supprime! Suppression réussie!
+close database
+evaluate ""
+SetVar *fn LASTRESULT
+SetVar *saved 0
+end
+
+[del1]
+delete from *actual where libelle = *fn ;
+[/del1]
+
+[del2]
+delete from *actual where nom = *fn ;
+[/del2]

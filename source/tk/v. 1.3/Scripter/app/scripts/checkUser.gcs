@@ -1,0 +1,22 @@
+#checkUser.gcs
+connect database data.db
+GetInput 0
+SetVar *login LASTRESULT
+GetInput 1
+SetVar *password LASTRESULT
+query select_all with query
+count LASTLIST
+compare LASTRESULT 0
+if 0 then
+	MessageBox sorry Utilisateur inexistant!
+	end
+GetTableElement 0 of LASTLIST
+GetTableElement 0 of LASTRESULT
+SetVar *userId LASTRESULT
+create window app/screens/mangas.ch destroy current
+close database
+end
+
+[query]
+select * from Auteur where nom = *login and pass = *password ;
+[/query]

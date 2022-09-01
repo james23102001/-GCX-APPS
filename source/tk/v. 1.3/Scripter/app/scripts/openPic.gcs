@@ -1,0 +1,13 @@
+#openPic.gcs
+SetVar *pic SELECTED
+function pass continue
+end
+
+[@pass]
+command val load
+end
+[/@pass]
+
+[load]
+*pic
+[/load]

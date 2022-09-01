@@ -1,0 +1,25 @@
+#imgdata.gcs
+connect database data.db
+query select_all with query
+try @next else @error
+close database
+end
+
+[@next]
+print var LASTLIST
+SetVar *list LASTLIST
+SetVar *col 0
+execute app/scripts/getColumn.gcs 1
+print var LASTFILE
+create ListBox with LASTRESULT
+end
+[@next]
+
+[@error]
+LoadPic app/res/nothing.png
+[/@error]
+
+[query]
+select chemin from Resource where libelle like *fn;
+[/query]
+

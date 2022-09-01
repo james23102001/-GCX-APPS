@@ -1,0 +1,11 @@
+#addPerso.gcs
+evaluate ch_section( "about" , "app/scripts/about.gcs" )
+MessageBox A-propos LASTRESULT
+end
+
+[about]
+Software par GAME CENTER BURKINA,
+James LILIOU
+realise avec GC BUILDER
+Version 1.0
+[/about]

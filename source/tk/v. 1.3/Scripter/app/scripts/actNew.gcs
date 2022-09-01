@@ -1,0 +1,45 @@
+#actNew.gcs
+SetVar *saved 0
+evaluate ch_section( {*actual} , "app/scripts/actNew.gcs" )
+SetEditText var LASTRESULT
+end
+
+[Lieux]
+Nom de la zone :
+Type de zone :
+Description de la zone :
+[/Lieux]
+
+[Personages]
+Nom du personage :
+Genre du personage :
+Comportement :
+Type :
+Description :
+Objectif :
+Groupe :
+Specialite :
+[/Personages]
+
+[Objets]
+Nom de l'objet :
+Type d'objet :
+Effet de l'objet :
+Valeur de l'objet :
+Description :
+[/Objets]
+
+[Missions]
+Titre de la mission :
+Récompense a obtenir :
+Rang de la mission :
+Description :
+[/Missions]
+
+[Transformation]
+Titre de la transformation :
+Amelioration obtenue :
+Temps max :
+Effets secondaires :
+Description :
+[/Transformation]

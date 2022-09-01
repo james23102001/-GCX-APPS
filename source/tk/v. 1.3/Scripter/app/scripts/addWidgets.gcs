@@ -1,0 +1,19 @@
+#addWidgets.gcs
+evaluate self.geometry( '+0+0' )
+evaluate [" Nouveau " , " Config " , " About "]=>*1
+evaluate [[" Personnage " , " Lieu " , " Objet " , " Mission " , " Transformation " , " Idee ", "Script"], [" langage " , " edit style "], [" A propos "," Aide "]]=>*2
+evaluate [["app/scripts/addPerso.gcs" , "app/scripts/addLieu.gcs" , "app/scripts/addObjet.gcs" , "app/scripts/addMission.gcs" , "app/scripts/addTransformation.gcs" , "app/scripts/addIdee.gcs", "app/scripts/addScript.gcs"], ["app/scripts/setLang.gcs" , "app/scripts/setStyle.gcs"], ["app/scripts/about.gcs", "app/scripts/help.gcs"]]=>*3
+ToolBar *1 *2 *3
+SetVar *actual Idee
+connect database data.db
+query select_all with query
+GetTableElement 0 of LASTLIST
+GetTableElement 0 of LASTRESULT
+SetVar *mangaId LASTRESULT
+SetVar *saved 0
+close database
+end
+
+[query]
+select id from Manga where libelle like *manga ;
+[/query]

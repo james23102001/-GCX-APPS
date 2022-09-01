@@ -1,0 +1,5 @@
+#addPerso.gcs
+SetVar *actual Objets
+CreateText 9 Objets
+end
+

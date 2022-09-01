@@ -1,0 +1,35 @@
+#actions.gcs
+define $EQUAL 0
+compare LASTCLICKEDID 1
+if $EQUAL then
+	compare *saved 1
+	if $EQUAL then
+		execute app/scripts/actUpdate.gcs 1
+		end
+	execute app/scripts/actSave.gcs 1
+	end
+compare LASTCLICKEDID 2
+if $EQUAL then
+	execute app/scripts/actOpen.gcs 1
+	end
+compare LASTCLICKEDID 3
+if $EQUAL then
+	execute app/scripts/actNew.gcs 1
+	end
+compare LASTCLICKEDID 4
+if $EQUAL then
+	execute app/scripts/del.gcs 1
+	end
+compare LASTCLICKEDID 5
+if $EQUAL then
+	execute app/scripts/randomHelp.gcs 1
+	end
+compare LASTCLICKEDID 6
+if $EQUAL then
+	execute app/scripts/actExport.gcs 1
+	end
+compare LASTCLICKEDID 7
+if $EQUAL then
+	execute app/scripts/actPic.gcs 1
+	end
+end

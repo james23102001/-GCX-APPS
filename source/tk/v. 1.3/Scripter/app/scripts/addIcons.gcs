@@ -1,0 +1,9 @@
+#addIcons.gcs
+LoadPic app/res/save.png at 700-50
+LoadPic app/res/open.png at 750-50
+LoadPic app/res/add.png at 800-50
+LoadPic app/res/trash.png at 800-100
+LoadPic app/res/help.png at 700-100
+LoadPic app/res/export.png at 700-150
+LoadPic app/res/img.png at 800-150
+end

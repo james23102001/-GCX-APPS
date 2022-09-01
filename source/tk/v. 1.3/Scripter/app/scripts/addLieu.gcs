@@ -1,0 +1,4 @@
+#addPerso.gcs
+SetVar *actual Lieux
+CreateText 9 Lieux
+end

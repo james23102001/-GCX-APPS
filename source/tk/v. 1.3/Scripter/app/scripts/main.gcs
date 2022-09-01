@@ -1,0 +1,10 @@
+#script principal. Si c'est la première fois que l'appli tourne, alors ouvrir l'écran register. Sinon, ouvrir l'écran connect
+define $EXISTS 1
+define $MISSING 0
+check file data.db
+if $MISSING then
+	execute app/scripts/initDatabase.gcs 1
+	create window app/screens/register.ch destroy current
+	end
+create window app/screens/connect.ch destroy current
+end
