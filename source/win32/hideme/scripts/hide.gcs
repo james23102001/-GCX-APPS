@@ -1,0 +1,10 @@
+#hide.gcs
+GetInput 3
+SetVar *folder LASTRESULT
+count *folder
+compare LASTRESULT 0
+if 0 then
+	MessageBox error! Can 't load an empty file
+	end
+hide *folder
+end

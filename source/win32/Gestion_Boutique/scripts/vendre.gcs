@@ -1,0 +1,27 @@
+#vendre.gcs
+#L'input avec l'id 18
+GetInput 18
+#C'est le produit
+SetVar *prod LASTRESULT
+GetInput 20
+#Et celui avec l'id 20, c'est notre nombre
+SetVar *nb LASTRESULT
+#Une commande
+command val sell
+#On vérifie si on a ce qu'on veut vendre
+compare *status not_found!
+#Le then est moins sécurisé que la fonction, quand meme!
+if 0 then
+	MessageBox alert Not_Found!
+	end
+MessageBox alert done!
+end
+
+[sell]
+sell *prod *nb
+[/sell]
+
+#Bah voilà. Je copie-colle, à cause des variables.
+variable: *
+normalize: no
+addQuotes: no

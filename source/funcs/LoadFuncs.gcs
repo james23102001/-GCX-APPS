@@ -1,0 +1,16 @@
+#LoadUtils.gcs
+
+#Load a dictionnary of lambda funcs.
+#Need no parameter. Have to be runned at beginning to load the FUNCS dictionnary. Here is an example of how to use a function of FUNCS :
+# evaluate self.vars.getvar( "*FUNCS" )["deleteNCharsFromEnd"]("Hello world!", 4)
+# or
+# evaluate {*FUNCS}["deleteNCharsFromEnd"]("Hello world, 4)
+# if using GC_tk v 1.3 or higher
+
+print val **** LOADUTILS FUNCTION
+evaluate dict()
+SetVar *FUNCS LASTRESULT
+evaluate lambda text, len : text [0:-int(len)]
+evaluate self.vars.getvar( "*FUNCS" ).__setitem__( "deleteNCharsFromEnd" , self.vars.getvar( "LASTRESULT" ))
+print var *FUNCS
+end

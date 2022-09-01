@@ -1,0 +1,6 @@
+code.exe : 
+	usage : [code create]
+	needs : Config.ch file with :
+			- minimal_cars: [integer]
+			- letters: [yes/no]
+			- digits: [yes/no]

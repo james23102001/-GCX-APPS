@@ -1,0 +1,7 @@
+#flip.gcs
+#Tout effacer
+RemoveAll
+#Créer un texte vide remplissant l écran
+SetVar LASTRECT 0-0-500-400
+CreateText 0
+end

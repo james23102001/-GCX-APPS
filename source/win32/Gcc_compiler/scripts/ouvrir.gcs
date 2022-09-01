@@ -1,0 +1,6 @@
+#Action du bouton ouvrir. On ouvrira des fichiers textes.
+OpenFile TEXT
+end
+
+#On inclut le fichier de constantes pour TEXT
+constants: C:\GC\global_ch_config\constants.ch

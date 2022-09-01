@@ -1,0 +1,43 @@
+#ChangerBase.gcs
+#La modification de FIRSTFILE permet de s'assurer que les fonctions s'executeront correctement.
+SetVar FIRSTFILE scripts/changerBase.gcs
+#On va créer le texte à x=400, y=0. width=100, size=20
+SetVar LASTRECT 400-0-100-20
+#Si on est à 10 on passe à 2, et ainsi de suite
+compare *actual 10
+if EQUAL c10
+compare *actual 2
+if EQUAL c2
+compare *actual 8
+if EQUAL c8
+compare *actual 16
+if EQUAL c16
+end
+
+#Dans ces fonctions, on va se contenter de changer la base, et d'afficher la nouvelle base au rect préparé plus tot.
+[@c10]
+SetVar *actual 2
+CreateText 0 2
+end
+[/@c10]
+
+[@c2]
+SetVar *actual 8
+CreateText 0 8
+end
+[/@c2]
+
+[@c8]
+SetVar *actual 16
+CreateText 0 16
+end
+[/@c8]
+
+[@c16]
+SetVar *actual 10
+CreateText 0 10
+end
+[/@c16]
+
+#Sans quoi EQUAL ne voudra rien dire, héhé
+constants: C:\GC\global_ch_config\constants.ch

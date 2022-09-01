@@ -1,0 +1,23 @@
+#init.gcs
+#On utilise juste done pour savoir si le dossier est créé ou non.
+compare *done 1
+#Si il l'est, on a pas besoin de le recréer
+if 0 quit
+#Sinon bah... Créons le. Je veux que mon fichier index soit 0 alors je vais forcer LASTINDEX
+SetVar LASTINDEX 0
+#C'est cette ligne là
+create table Produit
+#Voilà, maintenant, c'est créé
+SetVar *done 1
+end
+
+[@quit]
+end
+[@quit]
+
+#Voilà, on ne laisse pas sans valeur parceque sell.exe considèrera les sans valeurs comme des fichiers inexistants, alors on met n'importe quoi tant que c'est une valeur.
+[Produit]
+Nom: -
+Prix: -
+Nombre: -
+[/Produit]

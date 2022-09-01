@@ -1,0 +1,9 @@
+#save.gcs
+#Récupérer la liste des champs,
+GetFormResult
+print var LASTRESULT
+#Les insérer dans la table codes
+insert codes\ LASTRESULT
+#Et voilà!
+MessageBox done! Code_insere!
+end

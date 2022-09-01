@@ -1,0 +1,9 @@
+#Sub.gcs
+GetInput 5
+SetVar *nombre1 LASTRESULT
+GetInput 8
+SetVar *nombre2 LASTRESULT
+SetVar LASTRECT 350-200-150-25
+substract *nombre1 *nombre2
+CreateText 0 LASTRESULT
+end
