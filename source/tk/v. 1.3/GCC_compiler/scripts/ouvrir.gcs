@@ -1,0 +1,7 @@
+#Action du bouton ouvrir. On ouvrira des fichiers textes.
+evaluate fd.askopenfilename(title= "Open a C code" , initialdir= '.' , filetypes= [( ' C source files ' , ' *.c ' )])
+SetVar *fn LASTRESULT
+SetEditText val
+LoadFile *fn
+SetVar *sv 1
+end

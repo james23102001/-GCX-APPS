@@ -1,0 +1,12 @@
+#config.gcs
+#Changer les couleurs de certains éléments
+config item 23 fill= 'red'
+config item 20 fill= 'red'
+config item 21 fill= 'red'
+config item 22 fill= 'red'
+config item 14 fill= 'red'
+config item 24 fill= 'white'
+config item 25 fill= 'white'
+config item 26 fill= 'white'
+config item 27 fill= 'white'
+end

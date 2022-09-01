@@ -1,0 +1,2 @@
+@"C:\shortcuts\mingw_minimal\bin\gcc" "C:/Users/jAMES/Documents/Work/Gcc_compiler/version2/test.c" -o "C:/Users/jAMES/Documents/Work/Gcc_compiler/version2/test"
+@"C:/Users/jAMES/Documents/Work/Gcc_compiler/version2/test"
