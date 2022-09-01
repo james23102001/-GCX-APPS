@@ -1,0 +1,13 @@
+random 0 100
+SetVar *magique LASTRESULT
+random 0 *magique
+SetVar *min LASTRESULT
+random *magique 100
+SetVar *max LASTRESULT
+SetVar LASTRECT 500-70
+CreateText 6 *min
+SetVar LASTRECT 500-130
+CreateText 7 *max
+end
+
+normalize: yes

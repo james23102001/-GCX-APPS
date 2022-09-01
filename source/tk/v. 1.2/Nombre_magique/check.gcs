@@ -1,0 +1,13 @@
+GetInput 5
+compare LASTRESULT *magique
+if 3 then
+	MessageBox alerte Le_nombre_magique_est_plus_petit!
+	end
+if 4 then
+	MessageBox alerte Le_nombre_magique_est_plus_grand!
+	end
+if 0 then
+	MessageBox alerte Bravo!_Vous_avez_trouve_le_nombre_magique!Cliquez_pour_rejouer!
+    SetVar LASTFILE home.ch
+	execute init.gcs 1
+	end

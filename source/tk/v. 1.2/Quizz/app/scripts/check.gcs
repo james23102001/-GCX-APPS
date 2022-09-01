@@ -1,0 +1,30 @@
+#check.gcs
+compare *goodAns *var
+if 0 then
+	add *score 1
+	SetVar *score LASTRESULT
+	evaluate "Score :" +str({*score}).split( '.' ) [0]
+	CreateText 4 LASTRESULT
+	substract *left 1
+	SetVar *left LASTRESULT
+	evaluate "Questions restantes :" +str({*left}).split( '.' ) [0]
+	CreateText 5 LASTRESULT
+	turn *left into int
+	compare *left 0
+	if 0 then
+		execute app/scripts/appreciate.gcs 1
+		end
+	execute app/scripts/loadQuestions.gcs 1
+	end
+MessageBox Oups.. Mauvaise reponse!
+substract *left 1
+SetVar *left LASTRESULT
+evaluate "Questions restantes :" +str({*left}).split( '.' ) [0]
+CreateText 5 LASTRESULT
+turn *left into int
+compare *left 0
+if 0 then
+	execute app/scripts/appreciate.gcs 1
+	end
+execute app/scripts/loadQuestions.gcs 1
+end

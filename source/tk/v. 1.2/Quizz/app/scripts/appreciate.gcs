@@ -1,0 +1,28 @@
+#appreciate.gcs
+evaluate "Votre score est de "+str({*score})+"/20!\n"
+SetVar *msg LASTRESULT
+MessageBox Resultat *msg
+SetVar *actual 0
+ConfigInput 3 state='readonly'
+ConfigButton 0 text='Jouer'
+ConfigButton 1 text='A propos'
+ConfigButton 2 text='Quit'
+SetVar *left 20
+compare *score 10
+if 2 then
+	MessageBox Appreciation Vous devez vous appliquer!
+	SetVar *score 0
+	end
+compare *score 15
+if 2 then
+	MessageBox Appreciation Vous pouvez mieux faire!
+	SetVar *score 0
+	end
+compare *score 19
+if 2 then
+	MessageBox Appreciation Vous etes bon, continuez comme ca!
+	SetVar *score 0
+	end
+MessageBox Appreciation Extraordinaire! Vous etes le roi du quizz!
+SetVar *score 0
+end

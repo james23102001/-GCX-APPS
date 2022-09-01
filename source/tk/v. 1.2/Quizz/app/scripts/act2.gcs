@@ -1,0 +1,16 @@
+#act2.gcs
+compare *actual 0
+if 0 then
+	MessageBox About Made by James LILIOU, for GC
+	end
+SetVar *var 2
+execute app/scripts/check.gcs 1
+end
+
+
+
+
+
+
+
+
