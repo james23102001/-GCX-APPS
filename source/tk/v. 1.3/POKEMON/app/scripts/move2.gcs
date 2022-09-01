@@ -1,0 +1,16 @@
+count *userMoves
+compare LASTRESULT 2
+if 4 then
+	end
+GetTableElement 1 of *userMoves
+GetTableElement LASTRESULT of *moves
+SetVar *temp LASTRESULT
+GetTableElement 1 of *temp
+SetVar *damage LASTRESULT
+execute app/scripts/move.gcs 1
+end
+
+
+
+
+

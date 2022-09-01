@@ -1,0 +1,8 @@
+#loadSaved.gcs
+execute app/scripts/loadGame.gcs 1
+create window app/screens/selectLevel.ch destroy current
+end
+
+
+
+

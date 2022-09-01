@@ -1,0 +1,78 @@
+#move_foe.gcs
+#Script to apply damage to the player
+
+SetVar *agressor 1
+
+#Get random move of the mon and get the damage from it
+count *foeMoves
+substract LASTRESULT 1
+random 0 LASTRESULT
+GetTableElement LASTRESULT of *foeMoves
+GetTableElement LASTRESULT of *moves
+SetVar *temp LASTRESULT
+GetTableElement 1 of *temp
+SetVar *damage LASTRESULT
+
+#Update the damage with the strength if not 0
+compare *damage 0
+if 5 then
+	add *foestrenght *damage
+	divide LASTRESULT 2
+	SetVar *damage LASTRESULT
+	turn *damage into int
+
+#Get the move name and alert foe is using a move
+GetTableElement 0 of *temp
+evaluate "foe " +{*foename}+ " used " +{LASTRESULT}+ " !"
+MessageBox move LASTRESULT
+
+#The move has MISS_RATE/100 chances to miss.
+luck $MISS_RATE 100
+compare LASTRESULT 1
+if $EQUAL then
+	MessageBox missed But It missed!
+	SetVar *damage 0
+
+#Accuracy check
+luck *foeaccuracy $DEFAULT_ACCURACY
+compare LASTRESULT 0
+if $EQUAL then
+	MessageBox missed But It missed!
+	SetVar *damage 0
+
+#The move has CRITICAL_RATE/100 chances to have double damage.
+luck $CRITICAL_RATE 100
+compare LASTRESULT 1
+if $EQUAL then
+	MessageBox critical Critical hit!
+	multiply *damage 2
+	SetVar *damage LASTRESULT
+
+#execute effect script
+GetTableElement 2 of *temp
+evaluate ch_data( str({LASTRESULT}) , 'app/res/mons.ch' )
+evaluate self.onclick(1, {LASTRESULT} )
+
+#Then, substract the damage to the user hp
+substract *userHp *damage
+SetVar *userHp LASTRESULT
+turn *userHp into int
+
+#If user has no hp left, end the game
+compare *userHp 0
+if 2 then
+	evaluate "HP:0/" +str({*initialUserHp})
+	CreateText 2 LASTRESULT
+	MessageBox lost Player fainted!
+	execute app/scripts/nextMon.gcs 1
+	end
+
+#Update the text of foe life stats
+evaluate "HP:" +str({*foeHp})+ "/" +str({*initialFoeHp})
+CreateText 3 LASTRESULT
+evaluate "HP:" +str({*userHp})+ "/" +str({*initialUserHp})
+CreateText 2 LASTRESULT
+
+end
+
+constants: app/consts.ch

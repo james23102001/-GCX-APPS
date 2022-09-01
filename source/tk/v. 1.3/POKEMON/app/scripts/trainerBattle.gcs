@@ -1,0 +1,22 @@
+#trainerBattle.gcs
+SetVar *lf 12
+SetVar *lp 11
+turn *lf into int
+turn *lp into int
+
+SetVar *plyrcurrent 0
+SetVar *foecurrent 0
+
+GetTableElement *plyrcurrent of *playerteam
+SetVar *plyrmon LASTRESULT
+
+GetTableElement *foecurrent of *foeteam
+SetVar *foemon LASTRESULT
+
+print val ****RUNNING****
+
+execute app/scripts/loadBattle.gcs 1
+
+end
+
+

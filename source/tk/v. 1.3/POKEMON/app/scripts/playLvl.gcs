@@ -1,0 +1,18 @@
+#playLvl.gcs
+turn *lvl into int
+turn *clvl into int
+compare *clvl *lvl
+if 3 then
+	MessageBox Error Level locked!
+	end
+try @run else @pass
+end
+
+[@run]
+create window app/screens/battle.ch destroy current
+end
+[/@run]
+
+[@pass]
+end
+[/@pass]

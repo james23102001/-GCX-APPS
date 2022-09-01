@@ -1,0 +1,26 @@
+#initButtons
+#Will load the moves buttons
+
+#Getting the number of moves
+count *userMoves
+substract LASTRESULT 1
+SetVar *movesLen LASTRESULT
+turn *movesLen into int
+
+#Initiating the loop
+SetVar *i 4
+turn *i into int
+SetVar *inc 0
+turn *inc into int
+
+#Foe each moves, get the move name, then Set the button with it, and go to next.
+repeat *movesLen times
+evaluate {*moves} [{*userMoves} [{*inc}]][0]
+ConfigButton *i text = self.boss.vars.getvar( 'LASTRESULT' )
+evaluate int({*i})+1 =>*i
+evaluate int({*inc})+1 =>*inc
+stop repeat
+
+end
+
+

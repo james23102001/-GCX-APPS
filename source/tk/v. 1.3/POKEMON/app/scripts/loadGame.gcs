@@ -1,0 +1,15 @@
+#loadGame.gcs
+evaluate eval(ch_data( 'plyrmons:' , 'app/save.ch' ))
+SetVar *playerteam LASTRESULT
+evaluate int(ch_data( 'level:' , 'app/save.ch' ))
+SetVar *lvl LASTRESULT
+evaluate int(ch_data( 'score:' , 'app/save.ch' ))
+SetVar *score LASTRESULT
+end
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+#deleteImage
+#Takes *picid as a parameter
+#
+#	USAGE EXAMPLE : ( TK V.1.3 )
+#
+#	SetVar *id 1
+#	execute deleteImage.gcs 1
+#	end
+#Required version : 1.3
+#count returns 0 if a var does not exists
+
+count *id
+compare LASTRESULT 0
+if 0 then
+	print val
+	print val ***DELETE IMAGE FUNCTION ***
+	print val Parameter not supplied. This function need the parameter *id as the image id to delete.
+	print val Leaving...
+	print val
+	end
+#If params are supplied, then try the evaluations
+try @del else @error
+end
+
+[@del]
+evaluate self.page.pics.remove(int({*id}))
+evaluate self.page.sheet.delete(int({*id}))
+evaluate self.page.sheet.update()
+print val
+print val ***DELETE IMAGE FUNCTION ***
+print val Done!
+print val
+end
+[/@del]
+
+[@error]
+print val
+print val ***DELETE IMAGE FUNCTION ***
+print val Sorry... Could not delete this pic. Check the item id
+print val
+end
+[/@error]

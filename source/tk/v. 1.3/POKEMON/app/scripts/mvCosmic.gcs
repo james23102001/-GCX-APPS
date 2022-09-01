@@ -1,0 +1,19 @@
+#mvCosmic.gcs
+
+print val ****COSMIC POWER EFFECT****
+
+compare *agressor 0
+if 0 then
+	add *userHp $A_HARSH
+	turn LASTRESULT into int
+	SetVar *userHp LASTRESULT
+	MessageBox effect Player defense and special defense rose!
+	end
+#else do for the foe
+add *foeHp $A_HARSH
+turn LASTRESULT into int
+SetVar *foeHp LASTRESULT
+MessageBox effect Foe defense and special defense rose!
+end
+
+constants: app/consts.ch

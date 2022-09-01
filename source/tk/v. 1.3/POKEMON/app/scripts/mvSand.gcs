@@ -1,0 +1,20 @@
+#mvMagnitude.gcs
+
+print val ****SAND ATTACK EFFECT****
+
+#Sand attack reduce the accuracy of the victim
+compare *agressor 0
+if 0 then
+	substract *foeaccuracy $A_NORMAL
+	SetVar *foeaccuracy LASTRESULT 
+	turn *foeaccuracy into int
+	MessageBox effect Foe accuracy fell!
+	end
+#else do for the foe
+substract *plyraccuracy $A_NORMAL
+SetVar *plyraccuracy LASTRESULT
+turn *plyraccuracy into int
+MessageBox effect Player accuracy fell!
+end
+
+constants: app/consts.ch

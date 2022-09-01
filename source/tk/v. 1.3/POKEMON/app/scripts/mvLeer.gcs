@@ -1,0 +1,19 @@
+#mvLeer.gcs
+
+print val ****LEER EFFECT****
+
+#Leer reduce the foe defense. There i will just add agressor attk
+#if agressor is the user, add its attk
+compare *agressor 0
+if 0 then
+	add *plyrstrenght $A_NORMAL
+	SetVar *plyrstrenght LASTRESULT
+	MessageBox effect Foe defense fell!
+	end
+#else do for the foe
+add *foestrenght $A_NORMAL
+SetVar *foestrenght LASTRESULT
+MessageBox effect Player defense fell!
+end
+
+constants: app/consts.ch

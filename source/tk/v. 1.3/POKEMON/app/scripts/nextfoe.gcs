@@ -1,0 +1,39 @@
+#nextFoe.gcs
+#Called when player defeat enemy current pokemon
+
+#Increment
+add *foecurrent 1
+SetVar *foecurrent LASTRESULT
+turn *foecurrent into int
+
+#Then try to load. If it fail that mean that the current mon is the last
+try @next else @pass
+end
+
+#next function : Get the current mon, then call reloadBattle.
+[@next]
+GetTableElement *foecurrent of *foeteam
+SetVar *foemon LASTRESULT
+execute app/scripts/reloadBattle.gcs 1
+end
+[/@next]
+
+#pass function : There is no more mon, so player won!
+[@pass]
+MessageBox won Enemy is defeated!
+turn *clvl into int
+add *clvl 1
+SetVar *lvl LASTRESULT
+evaluate "Level " +str(int({*lvl}))+ " unlocked!"
+MessageBox Bravo LASTRESULT
+evaluate "Obtained " +str({*lvlscore})+ "$ !"
+MessageBox Bravo LASTRESULT
+add *score *lvlscore
+turn LASTRESULT into int
+SetVar *score LASTRESULT
+execute app/scripts/saveGame.gcs 1
+create window app/screens/selectLevel.ch destroy current
+end
+[/@pass]
+
+#END

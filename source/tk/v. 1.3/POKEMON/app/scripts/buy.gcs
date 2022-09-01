@@ -1,0 +1,29 @@
+#buy.gcs
+try @buy else @alert
+end
+
+[@buy]
+compare *price *score
+print var LASTCOMPARE
+if 3 then
+	MessageBox error Not enough Money!
+	end
+count *playerteam
+compare LASTRESULT 6
+if 1 then
+	MessageBox error You already have max amount of Pokemon!
+	end
+substract *score *price
+SetVar *score LASTRESULT
+CreateText 28 *score
+turn *pid into int
+evaluate {*playerteam}.append({*pid})
+execute app/scripts/saveGame.gcs 1
+reset
+end
+[/@buy]
+
+[@alert]
+MessageBox Error You have to choose a Pokemon!
+end
+[/@alert]

@@ -1,0 +1,32 @@
+#move1.gcs
+#event listener for the first move button
+
+#If this button is clicked, the mon must have at least one move
+count *userMoves
+compare LASTRESULT 1
+if 4 then
+	end
+
+#Get the first move of the mon and get the damage from it
+GetTableElement 0 of *userMoves
+GetTableElement LASTRESULT of *moves
+SetVar *temp LASTRESULT
+GetTableElement 1 of *temp
+SetVar *damage LASTRESULT
+
+#GetTableElement 1 of LASTRESULT
+#SetVar *damage LASTRESULT
+
+#execute the script
+execute app/scripts/move.gcs 1
+
+end
+
+
+
+
+
+
+
+
+

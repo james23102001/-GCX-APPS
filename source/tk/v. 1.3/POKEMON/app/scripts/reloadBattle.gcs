@@ -1,0 +1,64 @@
+#reloadBattle.gcs
+#Ce script est appelé quand il faut changer l'un des deux pokémons
+
+#see who must be changed
+compare *agressor 0
+if 0 then
+	function LOADFOE continue
+if 5 then
+	function LOADPLYR continue
+end
+
+#Anything explained into loadBattle.gcs
+[@LOADFOE]
+print val **RELOADING THE FOE**
+evaluate self.page.pics.remove({*lf})
+evaluate self.page.sheet.delete({*lf})
+evaluate self.page.sheet.update()
+turn *foemon into string
+evaluate ch_section_data( 'name:' , {*foemon}, 'app/res/mons.ch' )
+SetVar *foename LASTRESULT
+evaluate ch_section_data( 'sprite-f:' , {*foemon}, 'app/res/mons.ch' )+ '.png'
+SetVar *foePic LASTRESULT
+evaluate ch_section_data( 'lf:' , {*foemon}, 'app/res/mons.ch' )
+SetVar *initialFoeHp LASTRESULT
+evaluate ch_section_data( 'attk:' , {*foemon}, 'app/res/mons.ch' )
+SetVar *foestrenght LASTRESULT
+evaluate eval(ch_section_data( 'moves:' , {*foemon}, 'app/res/mons.ch' ))
+SetVar *foeMoves LASTRESULT
+SetVar *foeHp *initialFoeHp
+LoadPic *foePic at 246-20
+evaluate self.page.sheet.find_all()[-1]=>*lf
+evaluate "HP:" +{*foeHp}+ "/" +{*initialFoeHp}
+CreateText 3 LASTRESULT
+evaluate 'Enemy sent out' +{*foename}+ '!'
+MessageBox next LASTRESULT
+end
+[/@LOADFOE]
+
+[@LOADPLYR]
+print val **RELOADING PLAYER MON**
+evaluate self.page.pics.remove({*lp})
+evaluate self.page.sheet.delete({*lp})
+evaluate self.page.sheet.update()
+turn *plyrmon into string
+evaluate ch_section_data( 'name:' , {*plyrmon}, 'app/res/mons.ch' )
+SetVar *plyrname LASTRESULT
+evaluate ch_section_data( 'sprite-b:' , {*plyrmon}, 'app/res/mons.ch' )+ '.png'
+SetVar *plyrPic LASTRESULT
+evaluate ch_section_data( 'lf:' , {*plyrmon}, 'app/res/mons.ch' )
+SetVar *initialUserHp LASTRESULT
+evaluate ch_section_data( 'attk:' , {*plyrmon}, 'app/res/mons.ch' )
+SetVar *plyrstrenght LASTRESULT
+evaluate eval(ch_section_data( 'moves:' , {*plyrmon}, 'app/res/mons.ch' ))
+SetVar *userMoves LASTRESULT
+SetVar *userHp *initialUserHp
+LoadPic *plyrPic at 100-100
+evaluate self.page.sheet.find_all()[-1]=>*lp 
+evaluate "HP:" +{*userHp}+ "/" +{*initialUserHp}
+CreateText 2 LASTRESULT
+execute app/scripts/initButtons.gcs 1
+evaluate 'Trainer sent out ' +{*plyrname}+ '!'
+MessageBox next LASTRESULT
+end
+[/@LOADPLYR]

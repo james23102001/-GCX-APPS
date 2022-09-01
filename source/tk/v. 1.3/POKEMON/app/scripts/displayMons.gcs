@@ -1,0 +1,55 @@
+#displayMons.gcs
+evaluate self.geometry( '+0+0' )
+SetVar SELECTED Shedikyu
+execute app/scripts/loadGame.gcs 1
+count *playerteam
+compare LASTRESULT 0
+if 0 then
+	MessageBox error You have no Pokemon yet!
+	end
+SetVar *nb LASTRESULT
+
+SetVar *i 0
+repeat *nb times
+try @show else @pass
+evaluate int({*i})+1 => *i
+stop repeat
+end
+
+[@show]
+GetTableElement *i of *playerteam
+print val ***TRYING TO LOAD
+evaluate ch_section_data( 'sprite-f:' , str({LASTRESULT}), 'app/res/mons.ch' )+ '.png'
+print var LASTRESULT
+compare *i 0
+if 0 then
+	LoadPic LASTRESULT at 10-400
+	end
+compare *i 1
+if 0 then
+	LoadPic LASTRESULT at 110-400
+	end
+compare *i 2
+if 0 then
+	LoadPic LASTRESULT at 210-400
+	end
+compare *i 3
+if 0 then
+	LoadPic LASTRESULT at 310-400
+	end
+compare *i 4
+if 0 then
+	LoadPic LASTRESULT at 410-400
+	end
+compare *i 5
+if 0 then
+	LoadPic LASTRESULT at 510-400
+	end
+end
+[/@show]
+
+[@pass]
+end
+[/@pass]
+
+

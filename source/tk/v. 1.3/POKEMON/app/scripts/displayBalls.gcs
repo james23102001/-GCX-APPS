@@ -1,0 +1,5 @@
+#displayBalls.gcs
+LoadPic app/res/ball.png at 150-50
+LoadPic app/res/ball.png at 250-50
+LoadPic app/res/ball.png at 350-50
+end
