@@ -2,7 +2,6 @@
 ********************  GC BUILDER  *************************************
 ***********************************************************************
 
-
 This is GC BUILDER Binaries, the tools whish will allow you to run gcx apps and gcs files. Here you will get all last versions of every core.
 If you've never used GC Builder, please follow what i will say :
 
@@ -19,10 +18,11 @@ If you've never used GC Builder, please follow what i will say :
   - Then, install GC Builder Tk core. It contains the core wich run tk apps.
   - Then, you can install the other tools.
 
-
 - HOW TO RUN GCX Files:
-  If you've installed GC Manager, just open your gcx file with it.
+  If you've installed GC Manager, just open your gcx file with it. GC manager will install the app for you. Beware : To run an app, you need to get the right core for it! Once you've installed your app with GC Manager, you can find it inside GC Launcher!
+  
+ - Developpers note :
+  docs folder contains documentations for each core, but pardon me, they are not up-to date; you may discover new functions or syntaxes in the source files. Anyway, i would be happy to help if you're confused about anything!
 
-
-GAME CENTER BURKINA, 74912162
+GAME CENTER BURKINA, 74912162, lilioujames@gmail.com
 James LILIOU
