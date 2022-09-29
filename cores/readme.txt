@@ -44,6 +44,7 @@ What you need :
   
  - Developpers note :
   docs folder contains documentations for each core, but pardon me, they are not up-to date; you may discover new functions or syntaxes in the source files. Anyway, i would be happy to help if you're confused about anything!
+  GC Designer is a tool to create ch screens with drag-n-drop system.
 
 GAME CENTER BURKINA, 74912162, lilioujames@gmail.com
 James LILIOU
