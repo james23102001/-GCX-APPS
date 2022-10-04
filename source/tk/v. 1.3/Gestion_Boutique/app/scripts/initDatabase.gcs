@@ -1,0 +1,70 @@
+#initdb.gcs
+connect database database.db
+create table Fournisseur with q3
+create table Produit with q
+create table Vente with q2
+create table Utilisateur with q6
+create table Trace with q4
+create table Achat with q5
+commit
+close database
+end
+
+[q]
+create table Produit(
+id integer primary key autoincrement,
+libelle varchar(20),
+prixUnitaire decimal,
+prixGros decimal,
+idFournisseur integer,
+foreign key (idFournisseur) references Fournisseur(id)
+);
+[/q]
+
+#typevente contiendra 0 pour en détails et 1 pour en gros
+[q2]
+create table Vente(
+id integer primary key autoincrement,
+typeVente integer(1),
+idProduit integer,
+quantite integer,
+foreign key (idProduit) references Produit(id)
+);
+[/q2]
+
+[q3]
+create table Fournisseur(
+id integer primary key autoincrement,
+nom varchar(20),
+tel varchar(20)
+);
+[/q3]
+
+[q4]
+create table Trace(
+id integer primary key autoincrement,
+action varchar(60),
+heure date,
+idUtilisateur integer,
+foreign key (idUtilisateur) references Utilisateur(id)
+);
+[/q4]
+
+[q5]
+create table Achat(
+id integer primary key autoincrement,
+typeAchat integer(1),
+idProduit integer,
+quantite integer,
+foreign key (idProduit) references Produit(id)
+);
+[/q5]
+
+[q6]
+create table Utilisateur(
+id integer primary key autoincrement,
+login varchar(20),
+password varchar(20),
+role varchar(20)
+);
+[/q6]
