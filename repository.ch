@@ -17,5 +17,6 @@ WEBSHORTCUTCREATOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/mas
 SQLITE https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/sqlite.gcx
 Nombre_magique https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Nombre_magique.gcx
 code_maker https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/code_maker.gcx
+SG_tk https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/SG_tk.gcx
 
 #END
