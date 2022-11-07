@@ -16,5 +16,6 @@ TIC_TAC_TOE https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app
 WEBSHORTCUTCREATOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/WebShortcutCreator.gcx
 SQLITE https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/sqlite.gcx
 Nombre_magique https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Nombre_magique.gcx
+code_maker https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/code_maker.gcx
 
 #END
