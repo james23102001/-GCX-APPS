@@ -1,8 +1,8 @@
 #Repository of TK
 #Don't efit this file, please
 
-BASE_CONVERTER https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/BASE_CONVERTER_TK.gcx
-BASE_CONVERTER_2 https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Base_Converter_v2.gcx
+BASE_CONVERTER https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/BASE_CONVERTER_TK.gcx 1.png A free tool to convert numbers through basis!
+BASE_CONVERTER_2 https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Base_Converter_v2.gcx 1.png A free tool to convert numbers through basis!
 CALCULATOR_TK https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/CALCULATOR_tk.gcx
 CALC https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Calc.gcx
 CALCULATOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Calculator.gcx
@@ -10,7 +10,7 @@ GROUP https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Group
 KMS https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/KMS.gcx
 POKEMON https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/POKEMON.gcx
 QUIZZ https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Quizz.gcx
-SCRIPTER https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Scripter.gcx 1.png This is a free tool to create stories and mangas. By Game Center.
+SCRIPTER https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Scripter.gcx 10.png This is a free tool to create stories and mangas. By Game Center.
 TEXT_EDITOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Text_Editor.gcx
 TIC_TAC_TOE https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Tic_tac_toe.gcx
 WEBSHORTCUTCREATOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/WebShortcutCreator.gcx
