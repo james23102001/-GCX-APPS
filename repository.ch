@@ -10,7 +10,7 @@ GROUP https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Group
 KMS https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/KMS.gcx
 POKEMON https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/POKEMON.gcx
 QUIZZ https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Quizz.gcx
-SCRIPTER https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Scripter.gcx
+SCRIPTER https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Scripter.gcx 1.png This is a free tool to create stories and mangas. By Game Center.
 TEXT_EDITOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Text_Editor.gcx
 TIC_TAC_TOE https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Tic_tac_toe.gcx
 WEBSHORTCUTCREATOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/WebShortcutCreator.gcx
