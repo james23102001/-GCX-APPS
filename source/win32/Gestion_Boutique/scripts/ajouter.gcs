@@ -1,8 +1,0 @@
-#Ajouter.gcs
-#Récupérer le contenu du formulaire
-GetFormResult
-#L'insérer dans le dossier Produit
-insert Produit\ LASTRESULT
-#Et dire qu'on a fini!
-MessageBox done! Produit_Enregistre!
-end

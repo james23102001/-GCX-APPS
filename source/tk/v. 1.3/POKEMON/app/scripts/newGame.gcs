@@ -1,5 +1,0 @@
-#newGame.gcs
-SetVar *lvl 1
-SetVar *score 0
-create window app/screens/starters.ch destroy current
-end

@@ -1,4 +1,0 @@
-#init.gcs
-#Juste donner la base de départ.
-SetVar *actual 10
-end

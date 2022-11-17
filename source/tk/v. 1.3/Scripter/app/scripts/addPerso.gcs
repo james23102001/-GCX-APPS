@@ -1,4 +1,0 @@
-#addPerso.gcs
-SetVar *actual Personages
-CreateText 9 Personages
-end

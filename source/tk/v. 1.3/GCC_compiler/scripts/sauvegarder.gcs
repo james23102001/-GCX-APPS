@@ -1,8 +1,0 @@
-#Action du bouton Sauvegarder. On ouvrira des fichiers textes.
-count *fn
-compare LASTRESULT 0
-if 0 then
-	SaveFile
-	end
-SaveFile *fn
-end

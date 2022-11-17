@@ -1,8 +1,0 @@
-#checkDb.gcs
-check file database.db
-if 0 then
-	connect database database.db
-	execute app/scripts/initDatabase.gcs 1
-	end
-print val Database already exists!
-end

@@ -1,4 +1,0 @@
-#addPerso.gcs
-SetVar *actual Script
-CreateText 9 Script
-end

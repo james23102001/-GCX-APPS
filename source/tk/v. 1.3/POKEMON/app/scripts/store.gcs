@@ -1,8 +1,0 @@
-#store.gcs
-create window app/screens/store.ch destroy current
-end
-
-
-
-
-

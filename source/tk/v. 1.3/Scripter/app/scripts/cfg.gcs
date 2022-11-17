@@ -1,4 +1,0 @@
-#cfg.gcs
-evaluate ["Original","Dark","Punky","Girly","WaterBlue","Git","Coder","Consolas","NiceBoy","Ghost","Cool"]
-create ListBox with LASTRESULT
-end

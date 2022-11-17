@@ -1,5 +1,0 @@
-define $EQUAL 0
-compare LASTCLICKEDID 1
-if $EQUAL then
-	create window app/screens/addManga.ch destroy current
-end

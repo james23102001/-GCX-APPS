@@ -1,7 +1,0 @@
-#check.gcs
-compare LASTCLICKEDID 1
-if 0 then
-	OpenFile 0
-	SetInputText 3 LASTRESULT
-	end
-end

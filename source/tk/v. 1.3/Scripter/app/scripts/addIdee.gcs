@@ -1,4 +1,0 @@
-#addIdee.gcs
-SetVar *actual Idee
-CreateText 9 Idee
-end

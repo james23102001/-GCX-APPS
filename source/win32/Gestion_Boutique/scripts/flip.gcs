@@ -1,7 +1,0 @@
-#flip.gcs
-#Tout effacer,
-RemoveAll
-#Puis créer un texte vide remplissant toute la fenetre. C'est pas tout propre, mais bon...
-SetVar LASTRECT 0-0-500-400
-CreateText 0
-end
