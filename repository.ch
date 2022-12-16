@@ -15,7 +15,7 @@ TEXT_EDITOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app
 TIC_TAC_TOE https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Tic_tac_toe.gcx 8.png Who is the clever? You? Your Oponent? ( Tk )
 WEBSHORTCUTCREATOR https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/WebShortcutCreator.gcx 9.png Copy the website link there, and you will get the shortcut! ( Tk )
 SQLITE https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/sqlite.gcx 11.png Manage your SQLite databases! ( Tk )
-Nombre_magique https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Nombre_magique.gcx 
+Nombre_magique https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/Nombre_magique.gcx
 code_maker https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/code_maker.gcx 12.png Create passwords for your needs! ( Tk )
 SG_tk https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/SG_tk.gcx 13.png Create scripts for XSE rom hacking easily! ( Tk )
 GestRH https://raw.githubusercontent.com/james23102001/-GCX-APPS/master/app/GestRH.gcx
