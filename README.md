@@ -13,4 +13,4 @@ APPS folder :
 Thanks!
 
 ( whatsapp ) : 74 91 21 62
-( mail ) : lilioujames@gmail.com
+( mail ) : gcenter@gmail.com
